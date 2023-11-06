@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Product {
@@ -23,6 +23,6 @@ export class Product {
   price: number;
 
   @ApiProperty()
-  @Column()
+  @CreateDateColumn()
   createdAt: Date;
 }
